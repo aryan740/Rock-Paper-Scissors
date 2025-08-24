@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Rock Paper Scissors</h1>
+
+    <div class="settings">
+        <div class="setting-item">
+            <label for="score-limit">Win at:</label>
+            <input type="number" id="score-limit" value="5" min="1">
+        </div>
+        <div class="setting-item">
+            <button id="theme-switcher">Toggle Theme 🌗</button>
+        </div>
+    </div>
+
+    <div class="choices">
+        <div class="choice" id="rock">
+            <img src="https://sihoonathan.github.io/rock-paper-scissors/assets/img/rock2.png" alt="Rock Image">
+        </div>
+        <div class="choice" id="paper">
+            <img src="https://rock-paper-scissors-lilac-alpha.vercel.app/static/media/paper.png" alt="Paper Image">
+        </div>
+        <div class="choice" id="scissors">
+            <img src="https://i.pinimg.com/474x/67/eb/fd/67ebfd32e898b4ec3ae4e59ae33832c8.jpg" alt="Scissors Image">
+        </div>
+    </div>
+    
+    <div class="score-board">
+        <div class="score">
+            <p id="userScore">0</p>
+            <p>You</p>
+        </div>
+        <div class="score">
+            <p id="computerScore">0</p>
+            <p>Computer</p>
+        </div>
+    </div>
+
+    <div class="streak-board">
+        <p>🔥 Current Streak: <span id="streak">0</span></p>
+    </div>
+    
+    <div class="message-container">
+        <p id="message">Make your move!</p>
+        <button id="reset-btn">Reset Game</button>
+    </div>
+
+    <div class="game-log-container">
+        <h2>Game Log</h2>
+        <ul id="game-log"></ul>
+    </div>
+
+    <audio id="select-sound" src="https://www.soundjay.com/buttons/sounds/button-20.mp3" preload="auto"></audio>
+    <audio id="win-sound" src="https://www.soundjay.com/button/sounds/button-10.mp3" preload="auto"></audio>
+    <audio id="lose-sound" src="https://www.soundjay.com/button/sounds/button-8.mp3" preload="auto"></audio>
+
+    <script src="app.js"></script>
+</body>
+</html>
